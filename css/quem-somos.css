@@ -12,7 +12,7 @@ body {
     background-color: #f5f5f5;
     line-height: 1.6;
     color: #333;
-    background-image: url(/img/banner.png);
+    background-image: url(img/banner.png);
 }
 
 header {
@@ -112,7 +112,7 @@ nav ul li a:hover {
 
 .quem-somos {
     padding: 20px;
-    background-image: url(/img/banner.png);
+    background-image: url(img/banner.png);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     margin: 20px;
@@ -366,7 +366,7 @@ footer .newsletter button:hover {
 }
 
 .modal-content {
-    background-image: url(/img/banner.png);
+    background-image: url(img/banner.png);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

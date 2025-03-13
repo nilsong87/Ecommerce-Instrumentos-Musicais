@@ -13,7 +13,7 @@ body {
     line-height: 1.6;
     color: #333;
     padding-bottom: 60px;
-    background-image: url(/img/banner.png);
+    background-image: url(img/banner.png);
 }
 
 header {
@@ -27,7 +27,7 @@ header {
 }
 
 .banner {
-    background: url('/img/banner.png') repeat center center/contain;
+    background: url('img/banner.png') repeat center center/contain;
     margin-top: -95px;
     margin-bottom: -95px;
     color: white;
@@ -490,7 +490,7 @@ footer .newsletter button:hover {
 }
 
 .modal-content {
-    background-image: url(/img/banner.png);
+    background-image: url(img/banner.png);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

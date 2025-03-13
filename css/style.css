@@ -129,7 +129,7 @@ nav ul li a:hover {
 }
 
 .banner {
-    background: url('/assets/img/banner.png') repeat center center/contain;
+    background: url('/img/banner.png') repeat center center/contain;
     margin-top: -95px;
     margin-bottom: -95px;
     color: white;
@@ -165,7 +165,7 @@ nav ul li a:hover {
 
 .carrossel-container {
     position: relative;
-    background-image: url(/assets/img/banner.png);
+    background-image: url(/img/banner.png);
 }
 
 .carrossel {
@@ -229,7 +229,7 @@ nav ul li a:hover {
     object-fit: contain;
     border-radius: 10px;
     margin-bottom: 10px;
-    background-image: url(/assets/img/banner.png);
+    background-image: url(/img/banner.png);
     padding: 10px;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -479,7 +479,7 @@ footer .newsletter button:hover {
 }
 
 .modal-content {
-    background-image: url(/assets/img/banner.png);
+    background-image: url(/img/banner.png);
     padding: 30px;
     border-radius: 15px;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);

@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Encontre ajuda e suporte para utilizar nossa loja de instrumentos musicais.">
-    <meta name="keywords" content="instrumentos musicais, ajuda, suporte, e-commerce">
+    <meta name="description" content="Entre em contato conosco. Estamos aqui para ajudar.">
+    <meta name="keywords" content="instrumentos musicais, contato, fale conosco">
     <meta name="author" content="Nome da Loja">
-    <title>Ajuda | Loja de Instrumentos Musicais</title>
-    <link rel="stylesheet" href="/assets/css/ajuda.css">
+    <title>Fale Conosco | Loja de Instrumentos Musicais</title>
+    <link rel="stylesheet" href="/assets/css/fale-conosco.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -18,9 +18,9 @@
             <div class="menu-icon" aria-label="Menu">&#9776;</div>
             <ul>
                 <div class="logo">
-                    <a href="/home.html"><img src="/assets/img/logo.png" alt="Logo" class="logo-img"></a>
+                    <a href="../home.html"><img src="/assets/img/logo.png" alt="Logo" class="logo-img"></a>
                 </div>
-                <li><a href="/home.html">Home</a></li>
+                <li><a href="../home.html">Home</a></li>
                 <li><a href="/quem-somos.html">Quem Somos</a></li>
                 <li class="dropdown">
                     <a href="/produtos.html">Produtos</a>
@@ -40,62 +40,33 @@
     </header>
 
     <main>
-        <section class="ajuda">
-            <h1>Ajuda</h1>
-            <p class="parag">Encontre respostas para as perguntas mais frequentes e instruções sobre como usar nossa
-                loja.</p>
+        <section class="fale-conosco">
+            <h1>Fale Conosco</h1>
+            <p class="p">Se você tiver alguma dúvida, sugestão ou comentário, não hesite em nos contatar. Estamos aqui
+                para
+                ajudar!</p>
 
-            <div class="ajuda-secao">
-                <h2>Como faço um pedido?</h2>
-                <p>Para fazer um pedido, siga os seguintes passos:</p>
-                <ol>
-                    <li>Navegue pelos nossos produtos e adicione os itens desejados ao carrinho.</li>
-                    <li>Acesse o carrinho de compras clicando no ícone do carrinho no canto superior direito.</li>
-                    <li>Revise os itens no carrinho e clique em "Finalizar Compra".</li>
-                    <li>Preencha as informações de envio e pagamento.</li>
-                    <li>Confirme o pedido e aguarde a confirmação por e-mail.</li>
-                </ol>
-            </div>
+            <form id="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-            <div class="ajuda-secao">
-                <h2>Como rastrear meu pedido?</h2>
-                <p>Você pode rastrear seu pedido da seguinte maneira:</p>
-                <ol>
-                    <li>Acesse a página de "Rastreamento" no nosso site.</li>
-                    <li>Digite o código de rastreamento que você recebeu por e-mail.</li>
-                    <li>Clique em "Rastrear" para ver o status do seu pedido.</li>
-                </ol>
-            </div>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
 
-            <div class="ajuda-secao">
-                <h2>Como devolver um produto?</h2>
-                <p>Para devolver um produto, siga os seguintes passos:</p>
-                <ol>
-                    <li>Entre em contato com nosso suporte ao cliente através do e-mail
-                        contato@lojadeinstrumentos.com.br.</li>
-                    <li>Informe o motivo da devolução e o número do pedido.</li>
-                    <li>Embale o produto na embalagem original e envie para o endereço fornecido pelo suporte.</li>
-                    <li>Aguarde a confirmação da devolução e o reembolso do valor pago.</li>
-                </ol>
-            </div>
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required>
 
-            <div class="ajuda-secao">
-                <h2>Quais métodos de pagamento são aceitos?</h2>
-                <p>Aceitamos os seguintes métodos de pagamento:</p>
-                <ul>
-                    <li>Cartão de Crédito</li>
-                    <li>Boleto Bancário</li>
-                    <li>Transferência Bancária</li>
-                </ul>
-            </div>
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
-            <div class="ajuda-secao">
-                <h2>Como posso entrar em contato com o suporte ao cliente?</h2>
-                <p>Você pode entrar em contato com nosso suporte ao cliente das seguintes formas:</p>
-                <ul>
-                    <li>E-mail: contato@lojadeinstrumentos.com.br</li>
-                    <li>Telefone: (71) 1234-5678</li>
-                </ul>
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="info-contato">
+                <h2>Informações de Contato</h2>
+                <p><strong>Endereço:</strong> Rua dos Instrumentos, 123, Centro, Salvador, Bahia, Brasil</p>
+                <p><strong>Telefone:</strong> (71) 1234-5678</p>
+                <p><strong>E-mail:</strong> contato@lojadeinstrumentos.com.br</p>
             </div>
         </section>
     </main>
@@ -193,7 +164,6 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
     <script src="/assets/js/script.js"></script>
     <script src="/assets/js/login.js"></script>
 </body>

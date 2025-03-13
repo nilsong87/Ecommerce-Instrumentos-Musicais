@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Revise os produtos escolhidos no seu carrinho de compras.">
-    <meta name="keywords" content="instrumentos musicais, carrinho de compras, e-commerce">
+    <meta name="description" content="Encontre ajuda e suporte para utilizar nossa loja de instrumentos musicais.">
+    <meta name="keywords" content="instrumentos musicais, ajuda, suporte, e-commerce">
     <meta name="author" content="Nome da Loja">
-    <title>Carrinho de Compras | Loja de Instrumentos Musicais</title>
-    <link rel="stylesheet" href="/assets/css/carrinho.css">
+    <title>Ajuda | Loja de Instrumentos Musicais</title>
+    <link rel="stylesheet" href="/assets/css/ajuda.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -20,7 +20,7 @@
                 <div class="logo">
                     <a href="/home.html"><img src="/assets/img/logo.png" alt="Logo" class="logo-img"></a>
                 </div>
-                <li><a href="/home.html">Home</a></li>
+                <li><a href="../home.html">Home</a></li>
                 <li><a href="/quem-somos.html">Quem Somos</a></li>
                 <li class="dropdown">
                     <a href="/produtos.html">Produtos</a>
@@ -40,44 +40,62 @@
     </header>
 
     <main>
-        <section class="banner">
-            <h1>Bem-vindo à Loja de Instrumentos Musicais</h1>
-            <p>Compre com confiança! Garantimos a segurança das suas informações pessoais e financeiras durante todas as
-                etapas da compra.</p>
-        </section>
+        <section class="ajuda">
+            <h1>Ajuda</h1>
+            <p class="parag">Encontre respostas para as perguntas mais frequentes e instruções sobre como usar nossa
+                loja.</p>
 
-        <section class="propaganda">
-            <a href="produtos.html" style="color: black;">
-                <h2 class="promo">Continue Comprando!</h2>
-            </a>
-            <p class="promo1"> Descontos incríveis em todos os produtos. Aproveite agora!</p>
-        </section>
-
-        <section class="carrinho">
-            <h1>Carrinho de Compras</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Preço Unitário</th>
-                        <th>Subtotal</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="lista-carrinho">
-                </tbody>
-            </table>
-            <div class="calculo-frete">
-                <label for="cep">Calcular Frete:</label>
-                <input type="text" id="cep" placeholder="Digite seu CEP">
-                <button onclick="calcularFrete()">Calcular</button>
-                <p id="frete-valor">Frete: R$ 0,00</p>
+            <div class="ajuda-secao">
+                <h2>Como faço um pedido?</h2>
+                <p>Para fazer um pedido, siga os seguintes passos:</p>
+                <ol>
+                    <li>Navegue pelos nossos produtos e adicione os itens desejados ao carrinho.</li>
+                    <li>Acesse o carrinho de compras clicando no ícone do carrinho no canto superior direito.</li>
+                    <li>Revise os itens no carrinho e clique em "Finalizar Compra".</li>
+                    <li>Preencha as informações de envio e pagamento.</li>
+                    <li>Confirme o pedido e aguarde a confirmação por e-mail.</li>
+                </ol>
             </div>
-            <div class="total">
-                <p>Desconto: <span id="desconto">R$ 0,00</span></p>
-                <p>Total: <span id="total-valor">R$ 0,00</span></p>
-                <button onclick="finalizarCompra()">Finalizar Compra</button>
+
+            <div class="ajuda-secao">
+                <h2>Como rastrear meu pedido?</h2>
+                <p>Você pode rastrear seu pedido da seguinte maneira:</p>
+                <ol>
+                    <li>Acesse a página de "Rastreamento" no nosso site.</li>
+                    <li>Digite o código de rastreamento que você recebeu por e-mail.</li>
+                    <li>Clique em "Rastrear" para ver o status do seu pedido.</li>
+                </ol>
+            </div>
+
+            <div class="ajuda-secao">
+                <h2>Como devolver um produto?</h2>
+                <p>Para devolver um produto, siga os seguintes passos:</p>
+                <ol>
+                    <li>Entre em contato com nosso suporte ao cliente através do e-mail
+                        contato@lojadeinstrumentos.com.br.</li>
+                    <li>Informe o motivo da devolução e o número do pedido.</li>
+                    <li>Embale o produto na embalagem original e envie para o endereço fornecido pelo suporte.</li>
+                    <li>Aguarde a confirmação da devolução e o reembolso do valor pago.</li>
+                </ol>
+            </div>
+
+            <div class="ajuda-secao">
+                <h2>Quais métodos de pagamento são aceitos?</h2>
+                <p>Aceitamos os seguintes métodos de pagamento:</p>
+                <ul>
+                    <li>Cartão de Crédito</li>
+                    <li>Boleto Bancário</li>
+                    <li>Transferência Bancária</li>
+                </ul>
+            </div>
+
+            <div class="ajuda-secao">
+                <h2>Como posso entrar em contato com o suporte ao cliente?</h2>
+                <p>Você pode entrar em contato com nosso suporte ao cliente das seguintes formas:</p>
+                <ul>
+                    <li>E-mail: contato@lojadeinstrumentos.com.br</li>
+                    <li>Telefone: (71) 1234-5678</li>
+                </ul>
             </div>
         </section>
     </main>
@@ -99,6 +117,7 @@
                     <a href="/ajuda.html">Ajuda</a>
                 </div>
             </div>
+
 
             <div class="brands-section">
                 <div class="brands-logos">
@@ -175,7 +194,7 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <script src="/assets/js/carrinho.js"></script>
+    <script src="/assets/js/script.js"></script>
     <script src="/assets/js/login.js"></script>
 </body>
 

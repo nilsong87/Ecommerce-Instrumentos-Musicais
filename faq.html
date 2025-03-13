@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Perguntas Frequentes sobre nossa loja de instrumentos musicais.">
+    <meta name="keywords" content="instrumentos musicais, FAQ, perguntas frequentes, e-commerce">
+    <meta name="author" content="Nome da Loja">
+    <title>FAQ | Loja de Instrumentos Musicais</title>
+    <link rel="stylesheet" href="/assets/css/faq.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" aria-label="Menu">&#9776;</div>
+            <ul>
+                <div class="logo">
+                    <a href="/home.html"><img src="/assets/img/logo.png" alt="Logo" class="logo-img"></a>
+                </div>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/quem-somos.html">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="/produtos.html">Produtos</a>
+                    <div class="dropdown-content">
+                        <a href="/produtos/instrumentos.html">Instrumentos</a>
+                        <a href="/produtos/acessorios.html">Acessórios</a>
+                        <a href="/produtos/marcas.html">Marcas</a>
+                    </div>
+                </li>
+                <li><a href="#" id="login-btn">Login/Cadastro</a></li>
+                <li><a href="/carrinho.html" id="carrinho-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        (<span id="carrinho-quantidade">0</span>)
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="faq">
+            <h1>Perguntas Frequentes (FAQ)</h1>
+
+            <div class="pergunta">
+                <h2>Como posso rastrear meu pedido?</h2>
+                <p>Após a confirmação do pagamento, você receberá um e-mail com o código de rastreamento e as instruções
+                    para acompanhar seu pedido.</p>
+            </div>
+
+            <div class="pergunta">
+                <h2>Qual é o prazo de entrega?</h2>
+                <p>O prazo de entrega varia de acordo com a sua localização e o método de envio selecionado. Geralmente,
+                    os pedidos são entregues entre 5 a 10 dias úteis.</p>
+            </div>
+
+            <div class="pergunta">
+                <h2>Posso devolver um produto?</h2>
+                <p>Sim, você pode devolver um produto em até 30 dias após o recebimento. O produto deve estar em
+                    perfeitas condições e na embalagem original. Para iniciar uma devolução, entre em contato com nosso
+                    suporte ao cliente.</p>
+            </div>
+
+            <div class="pergunta">
+                <h2>Quais métodos de pagamento são aceitos?</h2>
+                <p>Aceitamos os seguintes métodos de pagamento: cartão de crédito, boleto bancário e transferência
+                    bancária.</p>
+            </div>
+
+            <div class="pergunta">
+                <h2>Como posso entrar em contato com o suporte ao cliente?</h2>
+                <p>Você pode entrar em contato com nosso suporte ao cliente através do e-mail:
+                    contato@lojadeinstrumentos.com.br ou pelo telefone: (71) 1234-5678.</p>
+            </div>
+
+            <div class="pergunta">
+                <h2>Os produtos têm garantia?</h2>
+                <p>Sim, todos os nossos produtos têm garantia. O período de garantia varia de acordo com o fabricante.
+                    Consulte a página do produto para obter informações detalhadas sobre a garantia.</p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-section">
+                <div class="social-media">
+                    <p class="ps">Siga-nos:</p>
+                    <div class="social-media-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="/fale-conosco.html">Fale Conosco</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/ajuda.html">Ajuda</a>
+                </div>
+            </div>
+
+
+            <div class="brands-section">
+                <div class="brands-logos">
+                    <a href="https://www.gibson.com" target="_blank">
+                        <img src="/assets/img/gibson1.png" alt="Gibson" class="brand-logo">
+                    </a>
+                    <a href="https://www.fender.com" target="_blank">
+                        <img src="/assets/img/fender.png" alt="Fender" class="brand-logo">
+                    </a>
+                    <a href="https://www.jacksonguitars.com" target="_blank">
+                        <img src="/assets/img/jacksom.png" alt="Jackson" class="brand-logo">
+                    </a>
+                    <a href="https://www.espguitars.com" target="_blank">
+                        <img src="/assets/img/esp1.jpg" alt="ESP" class="brand-logo">
+                    </a>
+                    <a href="https://www.ltdguitars.com" target="_blank">
+                        <img src="/assets/img/ltd.png" alt="LTD" class="brand-logo">
+                    </a>
+                    <a href="https://www.washburn.com" target="_blank">
+                        <img src="/assets/img/washburn.png" alt="Washburn" class="brand-logo">
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 Loja Teste de Instrumentos Musicais. Todos os direitos reservados.</p>
+            </div>
+
+            <div class="newsletter">
+                <p class="ps">Assine nossa newsletter:</p>
+                <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail">
+                <button>Assinar</button>
+            </div>
+        </div>
+    </footer>
+
+    <div id="login-cadastro-modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <div class="tabs">
+                <button class="tab-link active" onclick="openTab(event, 'Login')">Login</button>
+                <button class="tab-link" onclick="openTab(event, 'Cadastro')">Cadastro</button>
+            </div>
+            <div id="Login" class="tab-content active">
+                <h2 class="h2a">Login</h2>
+                <form>
+                    <label for="login-email">E-mail:</label>
+                    <input type="email" id="login-email" name="login-email" required>
+                    <label for="login-senha">Senha:</label>
+                    <input type="password" id="login-senha" name="login-senha" required>
+                    <button type="submit">Entrar</button>
+                </form>
+            </div>
+            <div id="Cadastro" class="tab-content">
+                <h2 class="h2a">Cadastro</h2>
+                <form id="form-cadastro">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email">E-mail:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="senha">Senha:</label>
+                    <input type="password" id="senha" name="senha" required>
+                    <button type="submit">Cadastrar</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Inclue o VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+    <script src="/assets/js/script.js"></script>
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>

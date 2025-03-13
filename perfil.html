@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Página de perfil do usuário">
+    <meta name="keywords" content="perfil, compras, pagamentos, endereços">
+    <meta name="author" content="Nome da Loja">
+    <title>Perfil do Usuário | Loja de Instrumentos Musicais</title>
+    <link rel="stylesheet" href="/assets/css/perfil.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+
+<body>
+    <header>
+        <nav>
+            <div class="menu-icon" aria-label="Menu">&#9776;</div>
+            <ul>
+                <div class="logo">
+                    <a href="/home.html"><img src="/assets/img/logo.png" alt="Logo" class="logo-img"></a>
+                </div>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/quem-somos.html">Quem Somos</a></li>
+                <li class="dropdown">
+                    <a href="/produtos.html">Produtos</a>
+                    <div class="dropdown-content">
+                        <a href="/produtos/instrumentos.html">Instrumentos</a>
+                        <a href="/produtos/acessorios.html">Acessórios</a>
+                        <a href="/produtos/marcas.html">Marcas</a>
+                    </div>
+                </li>
+                <li><a href="/home.html" id="login-btn">Sair</a></li>
+                <li><a href="/carrinho.html" id="carrinho-btn">
+                        <i class="fas fa-shopping-cart"></i>
+                        (<span id="carrinho-quantidade">0</span>)
+                    </a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="perfil">
+            <h1>Meu Perfil</h1>
+            <div class="perfil-container">
+                <!-- Informações do Perfil -->
+                <div class="perfil-info">
+                    <div class="foto-perfil">
+                        <img src="/assets/img/user.jpg" alt="Foto do Perfil" id="foto-perfil">
+                        <br>
+                        <button onclick="editarFoto()">Alterar Foto</button>
+                    </div>
+                    <div class="dados-perfil">
+                        <h2>Informações Pessoais</h2>
+                        <p class="p"><strong>Nome:</strong> <span id="nome-usuario">João Silva</span></p>
+                        <p class="p"><strong>E-mail:</strong> <span id="email-usuario">joao.silva@example.com</span></p>
+                        <p class="p"><strong>Telefone:</strong> <span id="telefone-usuario">(11) 99999-9999</span></p>
+                        <button onclick="editarPerfil()">Editar Perfil</button>
+                    </div>
+                </div>
+
+                <!-- Endereços de Entrega -->
+                <div class="enderecos">
+                    <h2>Endereços de Entrega</h2>
+                    <ul id="lista-enderecos">
+                        <li>
+                            <p class="p"><strong>Endereço Principal:</strong> Rua Exemplo, 123 - São Paulo, SP</p>
+                            <button onclick="editarEndereco(1)">Editar</button>
+                            <button onclick="removerEndereco(1)">Remover</button>
+                        </li>
+                    </ul>
+                    <button onclick="adicionarEndereco()">Adicionar Endereço</button>
+                </div>
+
+                <!-- Formas de Pagamento -->
+                <div class="pagamentos">
+                    <h2>Formas de Pagamento</h2>
+                    <ul id="lista-pagamentos">
+                        <li>
+                            <p class="p"><strong>Cartão de Crédito:</strong> **** **** **** 1234</p>
+                            <button onclick="editarPagamento(1)">Editar</button>
+                            <button onclick="removerPagamento(1)">Remover</button>
+                        </li>
+                    </ul>
+                    <button onclick="adicionarPagamento()">Adicionar Forma de Pagamento</button>
+                </div>
+
+                <!-- Histórico de Compras -->
+                <div class="compras">
+                    <h2>Histórico de Compras</h2>
+                    <ul id="lista-compras">
+                        <li>
+                            <p class="p"><strong>Compra #12345:</strong> 2 itens - Total: R$ 500,00</p>
+                            <button onclick="verDetalhesCompra(12345)">Ver Detalhes</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="left-section">
+                <div class="social-media">
+                    <p class="ps">Siga-nos:</p>
+                    <div class="social-media-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <a href="/fale-conosco.html">Fale Conosco</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/ajuda.html">Ajuda</a>
+                </div>
+            </div>
+
+            <div class="brands-section">
+                <div class="brands-logos">
+                    <a href="https://www.gibson.com" target="_blank">
+                        <img src="/assets/img/gibson1.png" alt="Gibson" class="brand-logo">
+                    </a>
+                    <a href="https://www.fender.com" target="_blank">
+                        <img src="/assets/img/fender.png" alt="Fender" class="brand-logo">
+                    </a>
+                    <a href="https://www.jacksonguitars.com" target="_blank">
+                        <img src="/assets/img/jacksom.png" alt="Jackson" class="brand-logo">
+                    </a>
+                    <a href="https://www.espguitars.com" target="_blank">
+                        <img src="/assets/img/esp1.jpg" alt="ESP" class="brand-logo">
+                    </a>
+                    <a href="https://www.ltdguitars.com" target="_blank">
+                        <img src="/assets/img/ltd.png" alt="LTD" class="brand-logo">
+                    </a>
+                    <a href="https://www.washburn.com" target="_blank">
+                        <img src="/assets/img/washburn.png" alt="Washburn" class="brand-logo">
+                    </a>
+                </div>
+                <p class="copyright">&copy; 2025 Loja Teste de Instrumentos Musicais. Todos os direitos reservados.</p>
+            </div>
+
+            <div class="newsletter">
+                <p class="ps">Assine nossa newsletter:</p>
+                <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail">
+                <button>Assinar</button>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Modal para Editar Perfil -->
+    <div id="modal-editar-perfil" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Editar Perfil</h2>
+            <form id="form-editar-perfil">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Endereço -->
+    <div id="modal-endereco" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2 id="titulo-endereco">Adicionar Endereço</h2>
+            <form id="form-endereco">
+                <label for="cep">CEP:</label>
+                <input type="text" id="cep" name="cep" required>
+                <label for="rua">Rua:</label>
+                <input type="text" id="rua" name="rua" required>
+                <label for="numero">Número:</label>
+                <input type="text" id="numero" name="numero" required>
+                <label for="cidade">Cidade:</label>
+                <input type="text" id="cidade" name="cidade" required>
+                <label for="estado">Estado:</label>
+                <input type="text" id="estado" name="estado" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Adicionar/Editar Pagamento -->
+    <div id="modal-pagamento" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2 id="titulo-pagamento">Adicionar Forma de Pagamento</h2>
+            <form id="form-pagamento">
+                <label for="numero-cartao">Número do Cartão:</label>
+                <input type="text" id="numero-cartao" name="numero-cartao" required>
+                <label for="validade">Validade:</label>
+                <input type="text" id="validade" name="validade" required>
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Modal para Alterar Foto -->
+    <div id="modal-alterar-foto" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="fecharModal()">&times;</span>
+            <h2>Alterar Foto</h2>
+            <form id="form-alterar-foto">
+                <label for="foto-perfil-input">Selecione uma imagem:</label>
+                <input type="file" id="foto-perfil-input" name="foto-perfil" accept="image/*" required>
+                <button type="submit">Salvar</button>
+            </form>
+        </div>
+    </div>
+    <!-- Inclue o VLibras -->
+    <div vw class="enabled">
+        <div vw-access-button class="active"></div>
+        <div vw-plugin-wrapper>
+            <div class="vw-plugin-top-wrapper"></div>
+        </div>
+    </div>
+    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
+    <script>
+        new window.VLibras.Widget('https://vlibras.gov.br/app');
+    </script>
+
+    <script src="/assets/js/perfil.js"></script>
+    <script src="/assets/js/login.js"></script>
+</body>
+
+</html>

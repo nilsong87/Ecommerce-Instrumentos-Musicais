@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Revise os produtos escolhidos no seu carrinho de compras.">
-    <meta name="keywords" content="instrumentos musicais, carrinho de compras, e-commerce">
+    <meta name="description" content="Entre em contato conosco. Estamos aqui para ajudar.">
+    <meta name="keywords" content="instrumentos musicais, contato, fale conosco">
     <meta name="author" content="Nome da Loja">
-    <title>Carrinho de Compras | Loja de Instrumentos Musicais</title>
-    <link rel="stylesheet" href="/assets/css/carrinho.css">
+    <title>Fale Conosco | Loja de Instrumentos Musicais</title>
+    <link rel="stylesheet" href="/css/fale-conosco.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 
@@ -18,12 +18,12 @@
             <div class="menu-icon" aria-label="Menu">&#9776;</div>
             <ul>
                 <div class="logo">
-                    <a href="../index.html"><img src="/assets/img/logo.png" alt="Logo" class="logo-img"></a>
+                    <a href="/index.html"><img src="/img/logo.png" alt="Logo" class="logo-img"></a>
                 </div>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="/sub-pages/quem-somos.html">Quem Somos</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/quem-somos.html">Quem Somos</a></li>
                 <li class="dropdown">
-                    <a href="/sub-pages/produtos.html">Produtos</a>
+                    <a href="/produtos.html">Produtos</a>
                     <div class="dropdown-content">
                         <a href="/produtos/instrumentos.html">Instrumentos</a>
                         <a href="/produtos/acessorios.html">Acessórios</a>
@@ -31,7 +31,7 @@
                     </div>
                 </li>
                 <li><a href="#" id="login-btn">Login/Cadastro</a></li>
-                <li><a href="/sub-pages/carrinho.html" id="carrinho-btn">
+                <li><a href="/carrinho.html" id="carrinho-btn">
                         <i class="fas fa-shopping-cart"></i>
                         (<span id="carrinho-quantidade">0</span>)
                     </a></li>
@@ -40,44 +40,33 @@
     </header>
 
     <main>
-        <section class="banner">
-            <h1>Bem-vindo à Loja de Instrumentos Musicais</h1>
-            <p>Compre com confiança! Garantimos a segurança das suas informações pessoais e financeiras durante todas as
-                etapas da compra.</p>
-        </section>
+        <section class="fale-conosco">
+            <h1>Fale Conosco</h1>
+            <p class="p">Se você tiver alguma dúvida, sugestão ou comentário, não hesite em nos contatar. Estamos aqui
+                para
+                ajudar!</p>
 
-        <section class="propaganda">
-            <a href="produtos.html" style="color: black;">
-                <h2 class="promo">Continue Comprando!</h2>
-            </a>
-            <p class="promo1"> Descontos incríveis em todos os produtos. Aproveite agora!</p>
-        </section>
+            <form id="form-contato">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" required>
 
-        <section class="carrinho">
-            <h1>Carrinho de Compras</h1>
-            <table>
-                <thead>
-                    <tr>
-                        <th>Produto</th>
-                        <th>Quantidade</th>
-                        <th>Preço Unitário</th>
-                        <th>Subtotal</th>
-                        <th>Ações</th>
-                    </tr>
-                </thead>
-                <tbody id="lista-carrinho">
-                </tbody>
-            </table>
-            <div class="calculo-frete">
-                <label for="cep">Calcular Frete:</label>
-                <input type="text" id="cep" placeholder="Digite seu CEP">
-                <button onclick="calcularFrete()">Calcular</button>
-                <p id="frete-valor">Frete: R$ 0,00</p>
-            </div>
-            <div class="total">
-                <p>Desconto: <span id="desconto">R$ 0,00</span></p>
-                <p>Total: <span id="total-valor">R$ 0,00</span></p>
-                <button onclick="finalizarCompra()">Finalizar Compra</button>
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="assunto">Assunto:</label>
+                <input type="text" id="assunto" name="assunto" required>
+
+                <label for="mensagem">Mensagem:</label>
+                <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
+
+                <button type="submit">Enviar</button>
+            </form>
+
+            <div class="info-contato">
+                <h2>Informações de Contato</h2>
+                <p><strong>Endereço:</strong> Rua dos Instrumentos, 123, Centro, Salvador, Bahia, Brasil</p>
+                <p><strong>Telefone:</strong> (71) 1234-5678</p>
+                <p><strong>E-mail:</strong> contato@lojadeinstrumentos.com.br</p>
             </div>
         </section>
     </main>
@@ -94,31 +83,32 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <a href="/sub-pages/fale-conosco.html">Fale Conosco</a>
-                    <a href="/sub-pages/faq.html">FAQ</a>
-                    <a href="/sub-pages/ajuda.html">Ajuda</a>
+                    <a href="/fale-conosco.html">Fale Conosco</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/ajuda.html">Ajuda</a>
                 </div>
             </div>
+
 
             <div class="brands-section">
                 <div class="brands-logos">
                     <a href="https://www.gibson.com" target="_blank">
-                        <img src="/assets/img/gibson1.png" alt="Gibson" class="brand-logo">
+                        <img src="/img/gibson1.png" alt="Gibson" class="brand-logo">
                     </a>
                     <a href="https://www.fender.com" target="_blank">
-                        <img src="/assets/img/fender.png" alt="Fender" class="brand-logo">
+                        <img src="/img/fender.png" alt="Fender" class="brand-logo">
                     </a>
                     <a href="https://www.jacksonguitars.com" target="_blank">
-                        <img src="/assets/img/jacksom.png" alt="Jackson" class="brand-logo">
+                        <img src="/img/jacksom.png" alt="Jackson" class="brand-logo">
                     </a>
                     <a href="https://www.espguitars.com" target="_blank">
-                        <img src="/assets/img/esp1.jpg" alt="ESP" class="brand-logo">
+                        <img src="/img/esp1.jpg" alt="ESP" class="brand-logo">
                     </a>
                     <a href="https://www.ltdguitars.com" target="_blank">
-                        <img src="/assets/img/ltd.png" alt="LTD" class="brand-logo">
+                        <img src="/img/ltd.png" alt="LTD" class="brand-logo">
                     </a>
                     <a href="https://www.washburn.com" target="_blank">
-                        <img src="/assets/img/washburn.png" alt="Washburn" class="brand-logo">
+                        <img src="/img/washburn.png" alt="Washburn" class="brand-logo">
                     </a>
                 </div>
                 <p class="copyright">&copy; 2025 Loja Teste de Instrumentos Musicais. Todos os direitos reservados.</p>
@@ -174,9 +164,8 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-
-    <script src="/assets/js/carrinho.js"></script>
-    <script src="/assets/js/login.js"></script>
+    <script src="/js/script.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 
 </html>

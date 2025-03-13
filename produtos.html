@@ -10,7 +10,7 @@
         content="instrumentos musicais, guitarras, baixos, baterias, teclados, acessórios, e-commerce">
     <meta name="author" content="Nome da Loja">
     <title>Produtos | Loja de Instrumentos Musicais</title>
-    <link rel="stylesheet" href="/assets/css/produtos.css">
+    <link rel="stylesheet" href="/css/produtos.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 
@@ -20,12 +20,12 @@
             <div class="menu-icon" aria-label="Menu">&#9776;</div>
             <ul>
                 <div class="logo">
-                    <a href="../index.html"><img src="/assets/img/logo.png" alt="Logo" class="logo-img"></a>
+                    <a href="/index.html"><img src="/img/logo.png" alt="Logo" class="logo-img"></a>
                 </div>
-                <li><a href="../index.html">Home</a></li>
-                <li><a href="/sub-pages/quem-somos.html">Quem Somos</a></li>
+                <li><a href="/index.html">Home</a></li>
+                <li><a href="/quem-somos.html">Quem Somos</a></li>
                 <li class="dropdown">
-                    <a href="/sub-pages/produtos.html">Produtos</a>
+                    <a href="/produtos.html">Produtos</a>
                     <div class="dropdown-content">
                         <a href="/produtos/instrumentos.html">Instrumentos</a>
                         <a href="/produtos/acessorios.html">Acessórios</a>
@@ -33,7 +33,7 @@
                     </div>
                 </li>
                 <li><a href="#" id="login-btn">Login/Cadastro</a></li>
-                <li><a href="/sub-pages/carrinho.html" id="carrinho-btn">
+                <li><a href="/carrinho.html" id="carrinho-btn">
                         <i class="fas fa-shopping-cart"></i>
                         (<span id="carrinho-quantidade">0</span>)
                     </a></li>
@@ -94,7 +94,7 @@
 
             <div class="lista-produtos">
                 <div class="produto" data-categoria="guitarras" data-marca="fender" data-preco="4200">
-                    <img src="/assets/img/guitar-fender.png" alt="Guitarra Fender Stratocaster">
+                    <img src="/img/guitar-fender.png" alt="Guitarra Fender Stratocaster">
                     <h3>Guitarra Fender Stratocaster</h3>
                     <p>Código: 12345</p>
                     <p>Preço: R$ 4.200,00</p>
@@ -102,7 +102,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="guitarras" data-marca="esp" data-preco="5000">
-                    <img src="/assets/img/esp.jpg" alt="Guitarra ESP">
+                    <img src="/img/esp.jpg" alt="Guitarra ESP">
                     <h3>Guitarra ESP</h3>
                     <p>Código: 12346</p>
                     <p>Preço: R$ 5.000,00</p>
@@ -110,7 +110,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="guitarras" data-marca="gibson" data-preco="6000">
-                    <img src="/assets/img/gibson.png" alt="Guitarra Gibson Les Paul">
+                    <img src="/img/gibson.png" alt="Guitarra Gibson Les Paul">
                     <h3>Guitarra Gibson Les Paul</h3>
                     <p>Código: 12347</p>
                     <p>Preço: R$ 6.000,00</p>
@@ -118,7 +118,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="guitarras" data-marca="ibanez" data-preco="1900">
-                    <img src="/assets/img/ibanez.png" alt="Guitarra Ibanez">
+                    <img src="/img/ibanez.png" alt="Guitarra Ibanez">
                     <h3>Guitarra Ibanez</h3>
                     <p>Código: 12348</p>
                     <p>Preço: R$ 1.900,00</p>
@@ -126,7 +126,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="guitarras" data-marca="jackson" data-preco="2800">
-                    <img src="/assets/img/jackson.png" alt="Guitarra Jackson">
+                    <img src="/img/jackson.png" alt="Guitarra Jackson">
                     <h3>Guitarra Jackson</h3>
                     <p>Código: 12349</p>
                     <p>Preço: R$ 2.800,00</p>
@@ -134,7 +134,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="guitarras" data-marca="tagima" data-preco="4300">
-                    <img src="/assets/img/tagima.png" alt="Guitarra Tagima Stratocaster">
+                    <img src="/img/tagima.png" alt="Guitarra Tagima Stratocaster">
                     <h3>Guitarra Tagima Stratocaster</h3>
                     <p>Código: 12350</p>
                     <p>Preço: R$ 4.300,00</p>
@@ -142,7 +142,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="baixos" data-marca="yamaha" data-preco="2600">
-                    <img src="/assets/img/yamaha.jpg" alt="Contra Baixo Yamaha">
+                    <img src="/img/yamaha.jpg" alt="Contra Baixo Yamaha">
                     <h3>Contra Baixo Yamaha 6 cordas</h3>
                     <p>Código: 12390</p>
                     <p>Preço: R$ 2.600,00</p>
@@ -150,7 +150,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="baixos" data-marca="fender" data-preco="3000">
-                    <img src="/assets/img/bfender.png" alt="Contra Baixo Fender">
+                    <img src="/img/bfender.png" alt="Contra Baixo Fender">
                     <h3>Contra Baixo Fender Bassman</h3>
                     <p>Código: 12356</p>
                     <p>Preço: R$ 3.000,00</p>
@@ -158,7 +158,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="baixos" data-marca="gibson" data-preco="7000">
-                    <img src="/assets/img/bgibson.png" alt="Contra Baixo Gibson">
+                    <img src="/img/bgibson.png" alt="Contra Baixo Gibson">
                     <h3>Contra Baixo Fender Bassman</h3>
                     <p>Código: 12358</p>
                     <p>Preço: R$ 7.000,00</p>
@@ -166,7 +166,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="baixos" data-marca="ibanez" data-preco="2500">
-                    <img src="/assets/img/bibanez.png" alt="Contra Baixo Ibanez">
+                    <img src="/img/bibanez.png" alt="Contra Baixo Ibanez">
                     <h3>Contra Baixo Ibanez Dio</h3>
                     <p>Código: 12360</p>
                     <p>Preço: R$ 2.750,00</p>
@@ -174,7 +174,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="baixos" data-marca="cort" data-preco="4000">
-                    <img src="/assets/img/cort.png" alt="Contra Baixo Cort">
+                    <img src="/img/cort.png" alt="Contra Baixo Cort">
                     <h3>Contra Baixo Cort</h3>
                     <p>Código: 12370</p>
                     <p>Preço: R$ 4.000,00</p>
@@ -182,7 +182,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="baixos" data-marca="macland" data-preco="8000">
-                    <img src="/assets/img/macland.png" alt="Contra Baixo Macland">
+                    <img src="/img/macland.png" alt="Contra Baixo Macland">
                     <h3>Contra Baixo Macland</h3>
                     <p>Código: 12372</p>
                     <p>Preço: R$ 8.000,00</p>
@@ -190,7 +190,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="acessorios" data-marca="boss" data-preco="850">
-                    <img src="/assets/img/boss-d1.jpg" alt="Pedal Boss DS-1">
+                    <img src="/img/boss-d1.jpg" alt="Pedal Boss DS-1">
                     <h3>Pedal Boss Distortion DS-1</h3>
                     <p>Código: 12343</p>
                     <p>Preço: R$ 850,00</p>
@@ -201,7 +201,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="acessorios" data-marca="boss" data-preco="950">
-                    <img src="/assets/img/boss-ce5.jpg" alt="Pedal Boss Chorus CE-5">
+                    <img src="/img/boss-ce5.jpg" alt="Pedal Boss Chorus CE-5">
                     <h3>Pedal Boss Chorus CE-5</h3>
                     <p>Código: 12345</p>
                     <p>Preço: R$ 950,00</p>
@@ -211,7 +211,7 @@
                     <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                 </div>
                 <div class="produto" data-categoria="acessorios" data-marca="boss" data-preco="900">
-                    <img src="/assets/img/boss-ge7.png" alt="Pedal Boss EQ GE-7 ">
+                    <img src="/img/boss-ge7.png" alt="Pedal Boss EQ GE-7 ">
                     <h3>Pedal Boss Equalizer GE-7</h3>
                     <p>Código: 12321</p>
                     <p>Preço: R$ 900,00</p>
@@ -244,9 +244,9 @@
                     </div>
                 </div>
                 <div class="footer-links">
-                    <a href="/sub-pages/fale-conosco.html">Fale Conosco</a>
-                    <a href="/sub-pages/faq.html">FAQ</a>
-                    <a href="/sub-pages/ajuda.html">Ajuda</a>
+                    <a href="/fale-conosco.html">Fale Conosco</a>
+                    <a href="/faq.html">FAQ</a>
+                    <a href="/ajuda.html">Ajuda</a>
                 </div>
             </div>
 
@@ -254,22 +254,22 @@
             <div class="brands-section">
                 <div class="brands-logos">
                     <a href="https://www.gibson.com" target="_blank">
-                        <img src="/assets/img/gibson1.png" alt="Gibson" class="brand-logo">
+                        <img src="/img/gibson1.png" alt="Gibson" class="brand-logo">
                     </a>
                     <a href="https://www.fender.com" target="_blank">
-                        <img src="/assets/img/fender.png" alt="Fender" class="brand-logo">
+                        <img src="/img/fender.png" alt="Fender" class="brand-logo">
                     </a>
                     <a href="https://www.jacksonguitars.com" target="_blank">
-                        <img src="/assets/img/jacksom.png" alt="Jackson" class="brand-logo">
+                        <img src="/img/jacksom.png" alt="Jackson" class="brand-logo">
                     </a>
                     <a href="https://www.espguitars.com" target="_blank">
-                        <img src="/assets/img/esp1.jpg" alt="ESP" class="brand-logo">
+                        <img src="/img/esp1.jpg" alt="ESP" class="brand-logo">
                     </a>
                     <a href="https://www.ltdguitars.com" target="_blank">
-                        <img src="/assets/img/ltd.png" alt="LTD" class="brand-logo">
+                        <img src="/img/ltd.png" alt="LTD" class="brand-logo">
                     </a>
                     <a href="https://www.washburn.com" target="_blank">
-                        <img src="/assets/img/washburn.png" alt="Washburn" class="brand-logo">
+                        <img src="/img/washburn.png" alt="Washburn" class="brand-logo">
                     </a>
                 </div>
                 <p class="copyright">&copy; 2025 Loja Teste de Instrumentos Musicais. Todos os direitos reservados.</p>
@@ -325,8 +325,8 @@
     <script>
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
-    <script src="/assets/js/produtos.js"></script>
-    <script src="/assets/js/login.js"></script>
+    <script src="/js/produtos.js"></script>
+    <script src="/js/login.js"></script>
 </body>
 
 </html>

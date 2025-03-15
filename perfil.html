@@ -22,15 +22,8 @@
                 </div>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="quem-somos.html">Quem Somos</a></li>
-                <li class="dropdown">
-                    <a href="produtos.html">Produtos</a>
-                    <div class="dropdown-content">
-                        <a href="/produtos/instrumentos.html">Instrumentos</a>
-                        <a href="/produtos/acessorios.html">Acessórios</a>
-                        <a href="/produtos/marcas.html">Marcas</a>
-                    </div>
-                </li>
-                <li><a href="index.html" id="login-btn">Sair</a></li>
+                <li><a href="produtos.html">Produtos</a></li>
+                <li><a href="#" id="login-btn">Login/Cadastro</a></li>
                 <li><a href="carrinho.html" id="carrinho-btn">
                         <i class="fas fa-shopping-cart"></i>
                         (<span id="carrinho-quantidade">0</span>)
@@ -39,11 +32,11 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main">
         <section class="perfil" style="background-image: url(img/banner.png)">
             <h1>Meu Perfil</h1>
             <div class="perfil-container">
-                <!-- Informações do Perfil -->
+
                 <div class="perfil-info">
                     <div class="foto-perfil">
                         <img src="img/user.jpg" alt="Foto do Perfil" id="foto-perfil">
@@ -59,7 +52,6 @@
                     </div>
                 </div>
 
-                <!-- Endereços de Entrega -->
                 <div class="enderecos">
                     <h2>Endereços de Entrega</h2>
                     <ul id="lista-enderecos">
@@ -72,7 +64,6 @@
                     <button onclick="adicionarEndereco()">Adicionar Endereço</button>
                 </div>
 
-                <!-- Formas de Pagamento -->
                 <div class="pagamentos">
                     <h2>Formas de Pagamento</h2>
                     <ul id="lista-pagamentos">
@@ -85,7 +76,6 @@
                     <button onclick="adicionarPagamento()">Adicionar Forma de Pagamento</button>
                 </div>
 
-                <!-- Histórico de Compras -->
                 <div class="compras">
                     <h2>Histórico de Compras</h2>
                     <ul id="lista-compras">
@@ -149,7 +139,6 @@
         </div>
     </footer>
 
-    <!-- Modal para Editar Perfil -->
     <div id="modal-editar-perfil" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
@@ -166,7 +155,6 @@
         </div>
     </div>
 
-    <!-- Modal para Adicionar/Editar Endereço -->
     <div id="modal-endereco" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
@@ -187,7 +175,6 @@
         </div>
     </div>
 
-    <!-- Modal para Adicionar/Editar Pagamento -->
     <div id="modal-pagamento" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
@@ -204,7 +191,6 @@
         </div>
     </div>
 
-    <!-- Modal para Alterar Foto -->
     <div id="modal-alterar-foto" class="modal">
         <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
@@ -216,7 +202,7 @@
             </form>
         </div>
     </div>
-    <!-- Inclue o VLibras -->
+    
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>

@@ -110,10 +110,6 @@ function fecharCarrinho() {
     document.getElementById('carrinho').style.display = 'none';
 }
 
-document.querySelector('.menu-icon').addEventListener('click', function () {
-    document.querySelector('nav ul').classList.toggle('active');
-});
-
 document.getElementById('login-btn').addEventListener('click', function () {
     document.getElementById('login-cadastro-modal').style.display = 'flex';
 });
@@ -157,3 +153,19 @@ function openTab(event, tabName) {
 function fecharModal() {
     document.getElementById('login-cadastro-modal').style.display = 'none';
 }
+
+document.querySelector('.menu-icon').addEventListener('click', function () {
+    const navUl = document.querySelector('nav ul');
+    navUl.classList.toggle('active');
+});
+
+document.addEventListener('click', function (event) {
+    const navUl = document.querySelector('nav ul');
+    const menuIcon = document.querySelector('.menu-icon');
+
+    if (!menuIcon.contains(event.target)) {
+        navUl.classList.remove('active');
+    }
+});
+
+new window.VLibras.Widget('https://vlibras.gov.br/app');

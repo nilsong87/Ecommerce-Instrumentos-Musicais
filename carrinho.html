@@ -15,21 +15,14 @@
 <body style="background-image: url(img/banner.png)">
     <header>
         <nav>
-            <div class="menu-icon" aria-label="Menu">&#9776;</div>
-            <ul>
+            <div class="menu-icon" aria-label="Menu" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-menu">
                 <div class="logo">
                     <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
                 </div>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="quem-somos.html">Quem Somos</a></li>
-                <li class="dropdown">
-                    <a href="produtos.html">Produtos</a>
-                    <div class="dropdown-content">
-                        <a href="/produtos/instrumentos.html">Instrumentos</a>
-                        <a href="/produtos/acessorios.html">Acessórios</a>
-                        <a href="/produtos/marcas.html">Marcas</a>
-                    </div>
-                </li>
+                <li><a href="produtos.html">Produtos</a></li>                
                 <li><a href="#" id="login-btn">Login/Cadastro</a></li>
                 <li><a href="carrinho.html" id="carrinho-btn">
                         <i class="fas fa-shopping-cart"></i>
@@ -40,7 +33,7 @@
     </header>
 
     <main>
-        <section class="banner" style="background-image: url(img/banner.png) repeat center center/contain">
+        <section class="banner" style="background-image: url(img/banner.png); background-repeat: repeat;">
             <h1>Bem-vindo à Loja de Instrumentos Musicais</h1>
             <p>Compre com confiança! Garantimos a segurança das suas informações pessoais e financeiras durante todas as
                 etapas da compra.</p>
@@ -56,7 +49,7 @@
         <section class="carrinho">
             <h1>Carrinho de Compras</h1>
             <table>
-                <thead>
+                <thead class="menu-compras">
                     <tr>
                         <th>Produto</th>
                         <th>Quantidade</th>
@@ -69,7 +62,7 @@
                 </tbody>
             </table>
             <div class="calculo-frete">
-                <label for="cep">Calcular Frete:</label>
+                <label class="texto-calcular" for="cep">Calcular Frete:</label>
                 <input type="text" id="cep" placeholder="Digite seu CEP">
                 <button onclick="calcularFrete()">Calcular</button>
                 <p id="frete-valor">Frete: R$ 0,00</p>
@@ -77,7 +70,7 @@
             <div class="total">
                 <p>Desconto: <span id="desconto">R$ 0,00</span></p>
                 <p>Total: <span id="total-valor">R$ 0,00</span></p>
-                <button onclick="finalizarCompra()">Finalizar Compra</button>
+                <button class="botao-compra" onclick="finalizarCompra()">Finalizar Compra</button>
             </div>
         </section>
     </main>
@@ -163,7 +156,7 @@
             </div>
         </div>
     </div>
-    <!-- Inclue o VLibras -->
+    
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>

@@ -15,7 +15,7 @@ function moverCarrossel(direction) {
     }
 
     const slideWidth = carrossel.children[0].offsetWidth;
-    const spacing = 20; 
+    const spacing = 20;
     const deslocamento = currentSlide * (slideWidth + spacing);
 
     carrossel.style.transform = `translateX(-${deslocamento}px)`;
@@ -69,18 +69,16 @@ function fecharModal() {
     document.getElementById('login-cadastro-modal').style.display = 'none';
 }
 
+const menuIcon = document.querySelector('.menu-icon');
+const navList = document.querySelector('.nav-list');
 
-
-document.querySelector('.menu-icon').addEventListener('click', function () {
-    const navUl = document.querySelector('nav ul');
-    navUl.classList.toggle('active');
+menuIcon.addEventListener('click', () => {
+    navList.classList.toggle('active');
 });
 
-document.addEventListener('click', function (event) {
-    const navUl = document.querySelector('nav ul');
-    const menuIcon = document.querySelector('.menu-icon');
-
-    if (!menuIcon.contains(event.target) && !navUl.contains(event.target)) {
-        navUl.classList.remove('active');
+document.addEventListener('click', (event) => {
+    if (!menuIcon.contains(event.target) && !navList.contains(event.target)) {
+        navList.classList.remove('active');
     }
 });
+

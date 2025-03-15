@@ -15,21 +15,14 @@
 <body style="background-image: url(img/banner.png)">
     <header>
         <nav>
-            <div class="menu-icon" aria-label="Menu">&#9776;</div>
-            <ul>
+            <div class="menu-icon" aria-label="Menu" onclick="toggleMenu()">&#9776;</div>
+            <ul id="nav-menu">
                 <div class="logo">
                     <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
                 </div>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="quem-somos.html">Quem Somos</a></li>
-                <li class="dropdown">
-                    <a href="produtos.html">Produtos</a>
-                    <div class="dropdown-content">
-                        <a href="/produtos/instrumentos.html">Instrumentos</a>
-                        <a href="/produtos/acessorios.html">Acessórios</a>
-                        <a href="/produtos/marcas.html">Marcas</a>
-                    </div>
-                </li>
+                <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="#" id="login-btn">Login/Cadastro</a></li>
                 <li><a href="carrinho.html" id="carrinho-btn">
                         <i class="fas fa-shopping-cart"></i>
@@ -39,24 +32,24 @@
         </nav>
     </header>
 
-    <main>
-        <section class="fale-conosco" style="background-image: url(img/banner.png)">
+    <main class="main">
+        <section class="fale-conosco" style="background-image: url(img/banner.png); background-repeat: repeat;">
             <h1>Fale Conosco</h1>
+            <br>
             <p class="p">Se você tiver alguma dúvida, sugestão ou comentário, não hesite em nos contatar. Estamos aqui
-                para
-                ajudar!</p>
+                para ajudar!</p>
 
-            <form id="form-contato">
-                <label for="nome">Nome:</label>
+            <form id="form-contato" class="form-contato">
+                <label class="form-text" for="nome">Nome:</label>
                 <input type="text" id="nome" name="nome" required>
 
-                <label for="email">E-mail:</label>
+                <label class="form-text" for="email">E-mail:</label>
                 <input type="email" id="email" name="email" required>
 
-                <label for="assunto">Assunto:</label>
+                <label class="form-text" for="assunto">Assunto:</label>
                 <input type="text" id="assunto" name="assunto" required>
 
-                <label for="mensagem">Mensagem:</label>
+                <label class="form-text" for="mensagem">Mensagem:</label>
                 <textarea id="mensagem" name="mensagem" rows="5" required></textarea>
 
                 <button type="submit">Enviar</button>
@@ -88,7 +81,6 @@
                     <a href="ajuda.html">Ajuda</a>
                 </div>
             </div>
-
 
             <div class="brands-section">
                 <div class="brands-logos">
@@ -123,7 +115,7 @@
     </footer>
 
     <div id="login-cadastro-modal" class="modal">
-        <div class="modal-content" style="background-image: url(img/banner.png)">
+        <div class="modal-content">
             <span class="close" onclick="fecharModal()">&times;</span>
             <div class="tabs">
                 <button class="tab-link active" onclick="openTab(event, 'Login')">Login</button>
@@ -153,19 +145,25 @@
             </div>
         </div>
     </div>
-    <!-- Inclue o VLibras -->
-    <div vw class="enabled">
-        <div vw-access-button class="active"></div>
-        <div vw-plugin-wrapper>
-            <div class="vw-plugin-top-wrapper"></div>
-        </div>
-    </div>
-    <script src="https://vlibras.gov.br/app/vlibras-plugin.js"></script>
     <script>
-        new window.VLibras.Widget('https://vlibras.gov.br/app');
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+
+        document.addEventListener('click', (event) => {
+            const menuIcon = document.querySelector('.menu-icon');
+            const navMenu = document.getElementById('nav-menu');
+
+            if (!menuIcon.contains(event.target) && !navMenu.contains(event.target)) {
+                navMenu.classList.remove('active');
+            }
+        });
     </script>
-    <script src="js/script.js"></script>
+
+    <script src="js/fale-conosco.js"></script>
     <script src="js/login.js"></script>
+
 </body>
 
 </html>

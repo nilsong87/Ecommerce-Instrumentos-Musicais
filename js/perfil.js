@@ -1,3 +1,7 @@
+document.querySelector('.menu-icon').addEventListener('click', function () {
+    const navUl = document.querySelector('nav ul');
+    navUl.classList.toggle('active');
+});
 
 function fecharModal() {
     document.querySelectorAll('.modal').forEach(modal => {
@@ -5,22 +9,19 @@ function fecharModal() {
     });
 }
 
-
 document.querySelectorAll('.close').forEach(closeBtn => {
     closeBtn.addEventListener('click', fecharModal);
 });
-
 
 function abrirModal(modalId) {
     document.getElementById(modalId).style.display = "flex";
 }
 
-
 function fazerLogoff() {
     localStorage.removeItem('usuarioLogado');
     sessionStorage.removeItem('token');
 
-    window.location.href = "/home.html";
+    window.location.href = "/index.html";
 }
 
 document.getElementById('login-btn').addEventListener('click', function (event) {
@@ -52,7 +53,6 @@ document.getElementById('foto-perfil-input').addEventListener('change', function
     if (file) {
         const reader = new FileReader();
         reader.onload = function (e) {
-
             document.getElementById('foto-perfil').src = e.target.result;
 
             localStorage.setItem('fotoPerfil', e.target.result);
@@ -155,3 +155,19 @@ document.getElementById('form-pagamento').addEventListener('submit', function (e
 function verDetalhesCompra(id) {
     console.log(`Detalhes da compra ${id}`);
 }
+
+const menuIcon = document.querySelector('.menu-icon');
+const navList = document.querySelector('.nav-list');
+
+menuIcon.addEventListener('click', () => {
+    navList.classList.toggle('active');
+});
+
+document.addEventListener('click', (event) => {
+    if (!menuIcon.contains(event.target) && !navList.contains(event.target)) {
+        navList.classList.remove('active');
+    }
+});
+
+
+new window.VLibras.Widget('https://vlibras.gov.br/app');

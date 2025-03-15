@@ -1,19 +1,3 @@
-
-function fecharModal() {
-    document.getElementById('login-cadastro-modal').style.display = 'none';
-}
-
-function openTab(event, tabName) {
-    const tabContents = document.querySelectorAll('.tab-content');
-    const tabLinks = document.querySelectorAll('.tab-link');
-
-    tabContents.forEach(tab => tab.classList.remove('active'));
-    tabLinks.forEach(link => link.classList.remove('active'));
-
-    document.getElementById(tabName).classList.add('active');
-    event.currentTarget.classList.add('active');
-}
-
 function fazerLogin(email, senha) {
     const usuariosCadastrados = [
         { email: "usuario@example.com", senha: "123456" }

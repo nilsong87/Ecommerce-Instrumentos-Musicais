@@ -22,14 +22,7 @@
                 </div>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="quem-somos.html">Quem Somos</a></li>
-                <li class="dropdown">
-                    <a href="produtos.html">Produtos</a>
-                    <div class="dropdown-content">
-                        <a href="/produtos/instrumentos.html">Instrumentos</a>
-                        <a href="/produtos/acessorios.html">Acessórios</a>
-                        <a href="/produtos/marcas.html">Marcas</a>
-                    </div>
-                </li>
+                <li><a href="produtos.html">Produtos</a></li>
                 <li><a href="#" id="login-btn">Login/Cadastro</a></li>
                 <li><a href="carrinho.html" id="carrinho-btn">
                         <i class="fas fa-shopping-cart"></i>
@@ -39,7 +32,7 @@
         </nav>
     </header>
 
-    <main>
+    <main class="main" >
         <section class="quem-somos" style="background-image: url(img/banner.png)">
             <h1>Quem Somos</h1>
             <p class="p">
@@ -70,7 +63,7 @@
         </section>
     </main>
 
-    <footer>
+    <footer class="footer-end">
         <div class="footer-container">
             <div class="left-section">
                 <div class="social-media">
@@ -121,7 +114,7 @@
     </footer>
 
     <div id="login-cadastro-modal" class="modal">
-        <div class="modal-content" style="background-image: url(img/banner.png)">
+        <div class="modal-content" style="background-image: url('img/banner.png')">
             <span class="close" onclick="fecharModal()">&times;</span>
             <div class="tabs">
                 <button class="tab-link active" onclick="openTab(event, 'Login')">Login</button>
@@ -152,7 +145,7 @@
         </div>
     </div>
 
-    <!-- Inclue o VLibras -->
+    
     <div vw class="enabled">
         <div vw-access-button class="active"></div>
         <div vw-plugin-wrapper>
@@ -164,7 +157,7 @@
         new window.VLibras.Widget('https://vlibras.gov.br/app');
     </script>
 
-    <script src="js/script.js"></script>
+    <script src="js/quem-somos.js"></script>
     <script src="js/login.js"></script>
 
 </body>

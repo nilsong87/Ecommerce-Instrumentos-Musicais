@@ -1,29 +1,3 @@
-let currentSlide = 0;
-
-function moverCarrossel(direction) {
-    const carrossel = document.querySelector('.produtos-container');
-    const totalSlides = carrossel.children.length;
-    const slidesVisiveis = window.innerWidth <= 768 ? 1 : 3;
-    const maxSlide = totalSlides - slidesVisiveis;
-
-    currentSlide += direction;
-
-    if (currentSlide < 0) {
-        currentSlide = 0;
-    } else if (currentSlide > maxSlide) {
-        currentSlide = maxSlide;
-    }
-
-    const slideWidth = carrossel.children[0].offsetWidth;
-    const spacing = 20; 
-    const deslocamento = currentSlide * (slideWidth + spacing);
-
-    carrossel.style.transform = `translateX(-${deslocamento}px)`;
-}
-
-document.querySelector('.prev-btn').addEventListener('click', () => moverCarrossel(-1));
-document.querySelector('.next-btn').addEventListener('click', () => moverCarrossel(1));
-
 document.getElementById('login-btn').addEventListener('click', function () {
     document.getElementById('login-cadastro-modal').style.display = 'flex';
 });
@@ -69,18 +43,7 @@ function fecharModal() {
     document.getElementById('login-cadastro-modal').style.display = 'none';
 }
 
-
-
 document.querySelector('.menu-icon').addEventListener('click', function () {
     const navUl = document.querySelector('nav ul');
     navUl.classList.toggle('active');
-});
-
-document.addEventListener('click', function (event) {
-    const navUl = document.querySelector('nav ul');
-    const menuIcon = document.querySelector('.menu-icon');
-
-    if (!menuIcon.contains(event.target) && !navUl.contains(event.target)) {
-        navUl.classList.remove('active');
-    }
 });

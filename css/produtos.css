@@ -117,7 +117,7 @@ nav ul li a:hover {
     display: none;
     font-size: 24px;
     cursor: pointer;
-    
+
 }
 
 .produtos {
@@ -555,10 +555,21 @@ footer .newsletter button:hover {
         margin-left: 36px;
     }
 
+
     .produto {
-        flex: 1 1 calc(50% - 20px);
-        max-width: calc(50% - 20px);
+        flex: 1 1 100%;
+        /* Faz com que cada produto ocupe 100% da largura */
+        max-width: 100%;
+        /* Define a largura máxima como 100% */
+        margin: 10px 0;
+        /* Ajusta a margem para espaçamento vertical */
     }
+
+    .lista-produtos {
+        flex-direction: column;
+        /* Alinha os produtos verticalmente */
+    }
+
 
     footer {
         position: relative;

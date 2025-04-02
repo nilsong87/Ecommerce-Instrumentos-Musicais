@@ -1,62 +1,115 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+<!-- Declaração do documento HTML5 com idioma português do Brasil -->
 
 <head>
+    <!-- Cabeçalho do documento - contém metadados e links para recursos externos -->
     <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8 para suportar caracteres especiais -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description"
-        content="Loja de instrumentos musicais para todos os estilos. Encontre guitarras, baixos, baterias, teclados e acessórios das melhores marcas.">
+    <!-- Configura a viewport para responsividade em dispositivos móveis -->
+    <meta name="description" content="Loja de instrumentos musicais para todos os estilos. Encontre guitarras, baixos, baterias, teclados e acessórios das melhores marcas.">
+    <!-- Descrição do site para motores de busca -->
     <meta name="keywords" content="instrumentos musicais, guitarras, baixos, baterias, teclados, acessórios">
+    <!-- Palavras-chave para SEO -->
     <meta name="author" content="Nome da Loja">
+    <!-- Autor do site -->
     <title>Loja de Instrumentos Musicais | Instrumentos para Todos os Estilos</title>
+    <!-- Título da página que aparece na aba do navegador -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Link para o arquivo CSS principal -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Link para o Font Awesome (ícones) -->
 </head>
 
-<body style="background-image: url(img/banner.png);">
+<body>
+    <!-- Corpo do documento - conteúdo visível da página -->
+    
+    <!-- Header -->
     <header>
+        <!-- Cabeçalho da página com menu de navegação -->
         <nav>
+            <!-- Elemento de navegação principal -->
             <div class="menu-icon" aria-label="Menu">&#9776;</div>
+            <!-- Ícone de menu para dispositivos móveis (hamburger) -->
             <ul>
+                <!-- Lista não ordenada para os itens de navegação -->
                 <div class="logo">
+                    <!-- Container para o logo -->
                     <a href="index.html"><img src="img/logo.png" alt="Logo" class="logo-img"></a>
+                    <!-- Link para a página inicial com imagem do logo -->
                 </div>
                 <li><a href="index.html">Home</a></li>
+                <!-- Item do menu para a página inicial -->
                 <li><a href="quem-somos.html">Quem Somos</a></li>
+                <!-- Item do menu para a página "Quem Somos" -->
                 <li><a href="produtos.html">Produtos</a></li>
+                <!-- Item do menu para a página de produtos -->
                 <li><a href="#" id="login-btn">Login/Cadastro</a></li>
+                <!-- Item do menu para login/cadastro (com ID para manipulação JS) -->
                 <li><a href="carrinho.html" id="carrinho-btn">
+                        <!-- Item do menu para o carrinho de compras -->
                         <i class="fas fa-shopping-cart"></i>
+                        <!-- Ícone do carrinho -->
                         (<span id="carrinho-quantidade">0</span>)
+                        <!-- Contador de itens no carrinho (inicia com 0) -->
                     </a></li>
             </ul>
         </nav>
     </header>
 
-    <main style="background-image: url('img/banner.png')">
+    <!-- Main Content -->
+    <main>
+        <!-- Conteúdo principal da página -->
+        
+        <!-- Banner -->
         <section class="banner" style="background: url('img/banner.png') repeat center center/contain;">
+            <!-- Seção do banner com imagem de fundo -->
             <h1>Bem-vindo à Loja de Instrumentos Musicais</h1>
+            <!-- Título principal -->
             <p>Encontre os melhores instrumentos e acessórios para todos os estilos musicais.</p>
+            <!-- Subtítulo -->
         </section>
 
+        <!-- Promoção -->
         <section class="propaganda">
+            <!-- Seção de promoções -->
             <h2 class="promo">Promoção Especial!</h2>
+            <!-- Título da promoção -->
             <p class="promo1">Descontos incríveis em todos os produtos. Aproveite agora!</p>
+            <!-- Texto da promoção -->
         </section>
 
+        <!-- Produtos em Destaque -->
         <section class="produtos">
+            <!-- Seção de produtos em destaque -->
             <h2>Produtos em Destaque</h2>
+            <!-- Título da seção -->
             <div class="carrossel-container" style="background-image: url('img/banner.png')">
+                <!-- Container do carrossel de produtos -->
                 <button class="carrossel-btn prev-btn" onclick="moverCarrossel(-1)">&#10094;</button>
+                <!-- Botão para voltar no carrossel -->
                 <div class="carrossel">
+                    <!-- Carrossel propriamente dito -->
                     <div class="produtos-container">
+                        <!-- Container dos produtos -->
+                        
+                        <!-- Produto 1 - Guitarra Fender -->
                         <div class="produto" data-categoria="guitarras" data-marca="fender" data-preco="5000">
+                            <!-- Div do produto com atributos de dados para filtragem -->
                             <img src="img/guitar-fender.png" alt="Guitarra Fender Stratocaster" style="background-image: url('img/banner.png')">
+                            <!-- Imagem do produto -->
                             <h3>Guitarra Fender Stratocaster</h3>
+                            <!-- Nome do produto -->
                             <p>Código: 12345</p>
+                            <!-- Código do produto -->
                             <p>Preço: R$ 5.000,00</p>
+                            <!-- Preço do produto -->
                             <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
+                            <!-- Botão para adicionar ao carrinho -->
                         </div>
+                        
+                        <!-- Produto 2 - Baixo Fender -->
                         <div class="produto" data-categoria="Baixos" data-marca="esp" data-preco="3000">
                             <img src="img/bfender.png" alt="Contra Baixo Fender" style="background-image: url('img/banner.png')">
                             <h3>Contra Baixo Fender Bassman</h3>
@@ -64,6 +117,8 @@
                             <p>Preço: R$ 3.000,00</p>
                             <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                         </div>
+                        
+                        <!-- Produto 3 - Guitarra Gibson -->
                         <div class="produto" data-categoria="guitarras" data-marca="gibson" data-preco="5000">
                             <img src="img/gibson.png" alt="Guitarra Gibson Les Paul" style="background-image: url('img/banner.png')">
                             <h3>Guitarra Gibson Les Paul</h3>
@@ -71,6 +126,8 @@
                             <p>Preço: R$ 5.000,00</p>
                             <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                         </div>
+                        
+                        <!-- Produto 4 - Guitarra Ibanez -->
                         <div class="produto" data-categoria="guitarras" data-marca="ibanez" data-preco="5000">
                             <img src="img/ibanez.png" alt="Guitarra Ibanez" style="background-image: url('img/banner.png')">
                             <h3>Guitarra Ibanez</h3>
@@ -78,6 +135,8 @@
                             <p>Preço: R$ 5.000,00</p>
                             <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                         </div>
+                        
+                        <!-- Produto 5 - Guitarra Jackson -->
                         <div class="produto" data-categoria="guitarras" data-marca="jackson" data-preco="5000">
                             <img src="img/jackson.png" alt="Guitarra Jackson" style="background-image: url('img/banner.png')">
                             <h3>Guitarra Jackson</h3>
@@ -85,6 +144,8 @@
                             <p>Preço: R$ 5.000,00</p>
                             <button onclick="adicionarAoCarrinho(event, this)">Adicionar ao Carrinho</button>
                         </div>
+                        
+                        <!-- Produto 6 - Guitarra Tagima -->
                         <div class="produto" data-categoria="guitarras" data-marca="tagima" data-preco="5000">
                             <img src="img/tagima.png" alt="Guitarra Tagima Stratocaster" style="background-image: url('img/banner.png')">
                             <h3>Guitarra Tagima Stratocaster</h3>
@@ -95,100 +156,164 @@
                     </div>
                 </div>
                 <button class="carrossel-btn next-btn" onclick="moverCarrossel(1)">&#10095;</button>
+                <!-- Botão para avançar no carrossel -->
             </div>
         </section>
 
+        <!-- Carrinho -->
         <section id="carrinho" class="carrinho" style="display: none;">
+            <!-- Seção do carrinho de compras (inicialmente oculta) -->
             <h2>Carrinho de Compras</h2>
+            <!-- Título do carrinho -->
             <ul id="lista-carrinho"></ul>
+            <!-- Lista de itens do carrinho (vazia inicialmente) -->
             <button onclick="fecharCarrinho()">Fechar Carrinho</button>
+            <!-- Botão para fechar o carrinho -->
         </section>
     </main>
 
+    <!-- Footer -->
     <footer class="footer-end">
+        <!-- Rodapé da página -->
         <div class="footer-container">
+            <!-- Container principal do rodapé -->
             <div class="left-section">
+                <!-- Seção esquerda do rodapé -->
+                
+                <!-- Redes Sociais -->
                 <div class="social-media">
                     <p class="ps">Siga-nos:</p>
+                    <!-- Título da seção de redes sociais -->
                     <div class="social-media-links">
+                        <!-- Links para redes sociais -->
                         <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <!-- Ícone do Facebook -->
                         <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <!-- Ícone do Instagram -->
                         <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <!-- Ícone do Twitter -->
                     </div>
                 </div>
+
+                <!-- Links Úteis -->
                 <div class="footer-links">
+                    <!-- Links rápidos no rodapé -->
                     <a href="fale-conosco.html">Fale Conosco</a>
+                    <!-- Link para página de contato -->
                     <a href="faq.html">FAQ</a>
+                    <!-- Link para perguntas frequentes -->
                     <a href="ajuda.html">Ajuda</a>
+                    <!-- Link para página de ajuda -->
                 </div>
             </div>
 
             <div class="brands-section">
+                <!-- Seção de marcas -->
                 <div class="brands-logos">
+                    <!-- Logos das marcas parceiras -->
                     <a href="https://www.gibson.com" target="_blank">
                         <img src="img/gibson1.png" alt="Gibson" class="brand-logo">
                     </a>
+                    <!-- Logo Gibson -->
                     <a href="https://www.fender.com" target="_blank">
                         <img src="img/fender.png" alt="Fender" class="brand-logo">
                     </a>
+                    <!-- Logo Fender -->
                     <a href="https://www.jacksonguitars.com" target="_blank">
                         <img src="img/jacksom.png" alt="Jackson" class="brand-logo">
                     </a>
+                    <!-- Logo Jackson -->
                     <a href="https://www.espguitars.com" target="_blank">
                         <img src="img/esp1.jpg" alt="ESP" class="brand-logo">
                     </a>
+                    <!-- Logo ESP -->
                     <a href="https://www.ltdguitars.com" target="_blank">
                         <img src="img/ltd.png" alt="LTD" class="brand-logo">
                     </a>
+                    <!-- Logo LTD -->
                     <a href="https://www.washburn.com" target="_blank">
                         <img src="img/washburn.png" alt="Washburn" class="brand-logo">
                     </a>
+                    <!-- Logo Washburn -->
                 </div>
                 <p class="copyright">&copy; 2025 Código Teste - Nilson Gomes. Todos os direitos reservados.</p>
+                <!-- Texto de copyright -->
             </div>
 
+            <!-- Newsletter -->
             <div class="newsletter">
+                <!-- Seção de newsletter -->
                 <p class="ps">Assine nossa newsletter:</p>
+                <!-- Texto de chamada -->
                 <input type="email" placeholder="Seu e-mail" aria-label="Seu e-mail">
+                <!-- Campo de entrada de e-mail -->
                 <button>Assinar</button>
+                <!-- Botão de assinar -->
             </div>
         </div>
     </footer>
 
+    <!-- Modal de Login/Cadastro -->
     <div id="login-cadastro-modal" class="modal">
+        <!-- Modal (janela flutuante) para login/cadastro -->
         <div class="modal-content" style="background-image: url('img/banner.png')">
+            <!-- Conteúdo do modal -->
             <span class="close" onclick="fecharModal()">&times;</span>
+            <!-- Botão para fechar o modal -->
             <div class="tabs">
+                <!-- Abas para alternar entre login e cadastro -->
                 <button class="tab-link active" onclick="openTab(event, 'Login')">Login</button>
+                <!-- Aba de login (ativa por padrão) -->
                 <button class="tab-link" onclick="openTab(event, 'Cadastro')">Cadastro</button>
+                <!-- Aba de cadastro -->
             </div>
             <div id="Login" class="tab-content active">
+                <!-- Conteúdo da aba de login -->
                 <h2 class="h2a">Login</h2>
+                <!-- Título do formulário de login -->
                 <form>
+                    <!-- Formulário de login -->
                     <label for="login-email">E-mail:</label>
+                    <!-- Rótulo do campo de e-mail -->
                     <input type="email" id="login-email" name="login-email" required>
+                    <!-- Campo de entrada de e-mail -->
                     <label for="login-senha">Senha:</label>
+                    <!-- Rótulo do campo de senha -->
                     <input type="password" id="login-senha" name="login-senha" required>
+                    <!-- Campo de entrada de senha -->
                     <button type="submit">Entrar</button>
+                    <!-- Botão de submit -->
                 </form>
             </div>
             <div id="Cadastro" class="tab-content">
+                <!-- Conteúdo da aba de cadastro -->
                 <h2 class="h2a">Cadastro</h2>
+                <!-- Título do formulário de cadastro -->
                 <form id="form-cadastro">
+                    <!-- Formulário de cadastro -->
                     <label for="nome">Nome:</label>
+                    <!-- Rótulo do campo de nome -->
                     <input type="text" id="nome" name="nome" required>
+                    <!-- Campo de entrada de nome -->
                     <label for="email">E-mail:</label>
+                    <!-- Rótulo do campo de e-mail -->
                     <input type="email" id="email" name="email" required>
+                    <!-- Campo de entrada de e-mail -->
                     <label for="senha">Senha:</label>
+                    <!-- Rótulo do campo de senha -->
                     <input type="password" id="senha" name="senha" required>
+                    <!-- Campo de entrada de senha -->
                     <button type="submit">Cadastrar</button>
+                    <!-- Botão de submit -->
                 </form>
             </div>
         </div>
     </div>
 
+    <!-- Scripts JavaScript -->
     <script src="js/script.js"></script>
+    <!-- Link para o arquivo JavaScript principal -->
     <script src="js/login.js"></script>
+    <!-- Link para o arquivo JavaScript de login -->
 </body>
-
 </html>
